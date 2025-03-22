@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    PlayerManager PlayerManager;
     void Start()
     {
-
+        PlayerManager = GameManager.Instance.PlayerManager;
     }
     void Update()
     {
@@ -12,21 +13,21 @@ public class PlayerInteract : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerManager.instance.InteractObject = collision.transform.gameObject;
+        PlayerManager.InteractObject = collision.transform.gameObject;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (PlayerManager.instance.InteractObject)
+        if (PlayerManager.InteractObject)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                PlayerManager.instance.InteractObject.GetComponent<Interact>().interact();
+                PlayerManager.InteractObject.GetComponent<Interact>().interact();
             }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        PlayerManager.instance.InteractObject = null;
+        PlayerManager.InteractObject = null;
     }
 }

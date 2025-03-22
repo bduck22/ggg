@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
     }
 
     public int Stage;
     public List<GameObject> Chests;
-    
 
+    public PlayerManager PlayerManager;
 }

@@ -8,14 +8,16 @@ public class CameraMove : MonoBehaviour
     Vector3 PlayerPosition;
     bool x;
     bool y;
+    PlayerManager PlayerManager;
     void Start()
     {
+        PlayerManager = GameManager.Instance.PlayerManager;
         x = true;
         y=true;
     }
     void Update()
     {
-        PlayerPosition = PlayerManager.instance.transform.position;
+        PlayerPosition = PlayerManager.transform.position;
         if (PlayerPosition.y > -12&& PlayerPosition.y < 26)
         {
             y = false;

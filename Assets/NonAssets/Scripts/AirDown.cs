@@ -6,13 +6,16 @@ using UnityEngine.Rendering;
 public class AirDown : MonoBehaviour
 {
     public float DownAirFerSecond;
+    PlayerManager PlayerManager;
+    Volume volume;
     void Start()
     {
-        
+        PlayerManager = GameManager.Instance.PlayerManager;
+        volume = Camera.main.GetComponent<Volume>();
     }
     void Update()
     {
-        PlayerManager.instance.Air -= DownAirFerSecond * Time.deltaTime;
-        Camera.main.GetComponent<Volume>().weight = 1- PlayerManager.instance.Air/ PlayerManager.instance.MaxAir;
+        PlayerManager.Air -= DownAirFerSecond * Time.deltaTime;
+        volume.weight = 1- PlayerManager.Air/ PlayerManager.MaxAir;
     }
 }

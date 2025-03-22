@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
+    PlayerManager PlayerManager;
     void Start()
     {
-        
+        PlayerManager = GameManager.Instance.PlayerManager;
     }
     void Update()
     {
@@ -14,11 +15,11 @@ public class Spike : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject == PlayerManager.instance.gameObject)
+        if(collision.CompareTag("Player"))
         {
-            if (!PlayerManager.instance.Invin)
+            if (!PlayerManager.Invin)
             {
-                PlayerManager.instance.playerHit(1);
+                PlayerManager.playerHit(1);
             }
         }
     }
