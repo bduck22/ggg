@@ -18,6 +18,8 @@ public class PlayerManager : MonoBehaviour
     public Animator PlayerAni;
     public Light2D  PlayerLight;
 
+    public GameObject InteractObject;
+
     public float MaxAir;
     public float Air;
     public float MaxHp;

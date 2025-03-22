@@ -13,6 +13,6 @@ public class AirDown : MonoBehaviour
     void Update()
     {
         PlayerManager.instance.Air -= DownAirFerSecond * Time.deltaTime;
-        //Camera.main.GetComponent<Volume>().profile.
+        Camera.main.GetComponent<Volume>().weight = 1- PlayerManager.instance.Air/ PlayerManager.instance.MaxAir;
     }
 }
