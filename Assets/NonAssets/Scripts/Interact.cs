@@ -10,7 +10,7 @@ public class Interact : MonoBehaviour
     {
         switch (interactType)
         {
-            case InteractType.Lever:Target.GetComponent<Animator>().enabled = true ; break;
+            case InteractType.Lever:Target.GetComponent<Animator>().enabled = true ; transform.localRotation = Quaternion.Euler(0,0,0); break;
             case InteractType.NextFloor:break;
         }
     }

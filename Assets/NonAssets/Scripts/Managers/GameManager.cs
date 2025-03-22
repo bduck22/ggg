@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     public int Stage;
+    public List<GameObject> Chests;
     
 
 }

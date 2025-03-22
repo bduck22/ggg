@@ -16,7 +16,10 @@ public class Spike : MonoBehaviour
     {
         if(collision.gameObject == PlayerManager.instance.gameObject)
         {
-            PlayerManager.instance.Hp--;
+            if (!PlayerManager.instance.Invin)
+            {
+                PlayerManager.instance.playerHit(1);
+            }
         }
     }
 }

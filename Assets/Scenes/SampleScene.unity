@@ -28730,6 +28730,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stage: 0
+  Chests:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &585839383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73742,6 +73749,7 @@ GameObject:
   - component: {fileID: 1934411540}
   - component: {fileID: 1934411541}
   - component: {fileID: 1934411542}
+  - component: {fileID: 1934411543}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -73884,6 +73892,8 @@ MonoBehaviour:
   PlayerAni: {fileID: 1934411538}
   PlayerLight: {fileID: 1803281079}
   InteractObject: {fileID: 0}
+  Invin: 0
+  InvinTime: 2
   MaxAir: 100
   Air: 100
   MaxHp: 100
@@ -73936,6 +73946,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0064015985, y: 0.43569213}
   m_Size: {x: 0.87138426, y: 0.87138426}
   m_Direction: 0
+--- !u!114 &1934411543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934411535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106256f81d3184740bc9de19faf51a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997774098
 GameObject:
   m_ObjectHideFlags: 0
