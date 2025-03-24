@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     Rigidbody2D Rb;
     Light2D Lg;
@@ -62,6 +62,11 @@ public class PlayerMove : MonoBehaviour
         {
             PlayerManager.PlayerAni.SetTrigger("Walk");
             PlayerManager.PlayerAni.SetFloat("Speed", PlayerManager.Speed/6.5f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerManager.PlayerAni.SetTrigger("Attack");
         }
     }
 }

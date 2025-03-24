@@ -18,7 +18,7 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         PlayerPosition = PlayerManager.transform.position;
-        if (PlayerPosition.y > -12&& PlayerPosition.y < 26)
+        if (PlayerPosition.y > -12&& PlayerPosition.y < 27f)
         {
             y = false;
         }

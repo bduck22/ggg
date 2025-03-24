@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public int Stage;
     public List<GameObject> Chests;
+    public List<int> Inventory;
 
+    public Transform InteractUi;
     public PlayerManager PlayerManager;
 }
