@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spike : MonoBehaviour
 {
     PlayerManager PlayerManager;
+    [SerializeField] int Damage;
     void Start()
     {
         PlayerManager = GameManager.Instance.PlayerManager;
@@ -19,7 +20,7 @@ public class Spike : MonoBehaviour
         {
             if (!PlayerManager.Invin)
             {
-                PlayerManager.playerHit(1);
+                PlayerManager.playerHit(Damage);
             }
         }
     }

@@ -23,11 +23,9 @@ public class PlayerInteract : MonoBehaviour
     {
         if (PlayerManager.InteractObject)
         {
-            Debug.Log("aa");
             EGuide.gameObject.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("bb");
                 PlayerManager.InteractObject.interact();
             }
         }

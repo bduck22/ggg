@@ -18,12 +18,12 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         PlayerPosition = PlayerManager.transform.position;
-        if (PlayerPosition.y > -12&& PlayerPosition.y < 27f)
+        if (PlayerPosition.y > -12&& PlayerPosition.y < 27f|| (transform.position.y > -12 && transform.position.y<27f))
         {
             y = false;
         }
         else y = true;
-        if(PlayerPosition.x > -12 && PlayerPosition.x < 13)
+        if(PlayerPosition.x > -12 && PlayerPosition.x < 13||(transform.position.x > -12 && transform.position.x < 13))
         {
             x = false;
         }

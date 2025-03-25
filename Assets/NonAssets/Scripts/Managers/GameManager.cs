@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
+
+        Init();
     }
 
     public int Stage;
@@ -21,4 +23,9 @@ public class GameManager : MonoBehaviour
 
     public Transform InteractUi;
     public PlayerManager PlayerManager;
+
+    void Init()
+    {
+        PlayerManager.InvenInit();
+    }
 }

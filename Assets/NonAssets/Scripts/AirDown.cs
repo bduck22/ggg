@@ -11,7 +11,7 @@ public class AirDown : MonoBehaviour
     void Start()
     {
         PlayerManager = GameManager.Instance.PlayerManager;
-        volume = Camera.main.GetComponent<Volume>();
+        volume = GetComponent<Volume>();
     }
     void Update()
     {

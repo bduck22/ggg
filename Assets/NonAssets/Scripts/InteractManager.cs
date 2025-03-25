@@ -5,7 +5,8 @@ using UnityEngine;
 public enum InteractType
 {
     Lever,
-    NextFloor
+    NextFloor,
+    Item
 }
 public class InteractManager : MonoBehaviour
 {

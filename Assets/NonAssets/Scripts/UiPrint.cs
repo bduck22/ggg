@@ -25,8 +25,12 @@ public class UiPrint : MonoBehaviour
     {
         switch (type)
         {
-            case UiType.Hp:text.text = PlayerManager.Hp.ToString("#,###") + " / "+PlayerManager.MaxHp.ToString("#,###"); image.fillAmount= PlayerManager.Hp/ PlayerManager.MaxHp; break;
-            case UiType.Air: text.text = PlayerManager.Air.ToString("#,###") + " / " + PlayerManager.MaxAir.ToString("#,###"); image.fillAmount = PlayerManager.Air / PlayerManager.MaxAir; break;
+            case UiType.Hp:text.text = PlayerManager.Hp.ToString("#,###") + " / "+PlayerManager.MaxHp.ToString("#,###"); 
+                image.fillAmount= PlayerManager.Hp/ PlayerManager.MaxHp; 
+                break;
+            case UiType.Air: text.text = PlayerManager.Air.ToString("#,###") + " / " + PlayerManager.MaxAir.ToString("#,###"); 
+                image.fillAmount = PlayerManager.Air / PlayerManager.MaxAir; 
+                break;
         }
     }
 }
