@@ -9,7 +9,8 @@ public class UiPrint : MonoBehaviour
     enum UiType
     {
         Hp,
-        Air
+        Air,
+        Weight
     }
     [SerializeField]UiType type;
     TMP_Text text;
@@ -25,11 +26,13 @@ public class UiPrint : MonoBehaviour
     {
         switch (type)
         {
-            case UiType.Hp:text.text = PlayerManager.Hp.ToString("#,###") + " / "+PlayerManager.MaxHp.ToString("#,###"); 
+            case UiType.Hp:text.text = PlayerManager.Hp.ToString("#,##0") + " / "+PlayerManager.MaxHp.ToString("#,##0"); 
                 image.fillAmount= PlayerManager.Hp/ PlayerManager.MaxHp; 
                 break;
-            case UiType.Air: text.text = PlayerManager.Air.ToString("#,###") + " / " + PlayerManager.MaxAir.ToString("#,###"); 
+            case UiType.Air: text.text = PlayerManager.Air.ToString("#,##0") + " / " + PlayerManager.MaxAir.ToString("#,##0"); 
                 image.fillAmount = PlayerManager.Air / PlayerManager.MaxAir; 
+                break;
+            case UiType.Weight: text.text = PlayerManager.Weight.ToString("#,##0kg") + " / " + PlayerManager.MaxWeight.ToString("#,##0kg");
                 break;
         }
     }

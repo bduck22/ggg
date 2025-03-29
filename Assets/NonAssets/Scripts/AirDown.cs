@@ -15,7 +15,13 @@ public class AirDown : MonoBehaviour
     }
     void Update()
     {
-        PlayerManager.Air -= DownAirFerSecond * Time.deltaTime;
-        volume.weight = 1- PlayerManager.Air/ PlayerManager.MaxAir;
+        if (GameManager.Instance.Playing)
+        {
+            PlayerManager.Air -= DownAirFerSecond * Time.deltaTime;
+            volume.weight = 1 - PlayerManager.Air / PlayerManager.MaxAir;
+        }else
+        {
+            PlayerManager.gameObject.SetActive(false);
+        }
     }
 }

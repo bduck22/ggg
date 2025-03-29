@@ -23,9 +23,12 @@ public class GameManager : MonoBehaviour
 
     public Transform InteractUi;
     public PlayerManager PlayerManager;
+    public bool Playing;
 
-    void Init()
+    public Transform[] StageStartposition;
+
+    public void Init()
     {
-        PlayerManager.InvenInit();
+        PlayerManager.PlayerInit();
     }
 }

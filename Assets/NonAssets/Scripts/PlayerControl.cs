@@ -68,5 +68,13 @@ public class PlayerControl : MonoBehaviour
         {
             PlayerManager.PlayerAni.SetTrigger("Attack");
         }
+
+        for (int i = 0; i < PlayerManager.Inventory.Count; i++)
+        {
+            if (Input.GetKeyDown((KeyCode)49+i))
+            {
+                PlayerManager.UseItem(PlayerManager.Inventory[i]);
+            }
+        }
     }
 }
